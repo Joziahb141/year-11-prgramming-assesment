@@ -1,0 +1,6 @@
+print("""
+**************************************************
+               Rock,Paper,Scissor
+**************************************************
+Welcome to the classic game of Rock,Paper,Scissors  
+""")
