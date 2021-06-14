@@ -1,5 +1,5 @@
 from random import choice
-
+Keep_Going = True
 print ("""
 **********Lucky Unicorn**********
 Welcome to the Lucky yunicorn game wher you can try your luck 
@@ -18,7 +18,7 @@ while not valid:
             print ("PLEASE ENTER A WHOLE NUMBER BETWEEN 1 AND 10")
     except ValueError:
         print ("PLEASE ENTER A WHOLE NUMBER BETWEEN 1 AND 10")
-Keep_Going = True
+
 won = 0.0
 tockens = ['Zebra','Zebra','Zebra','Zebra','Zebra','Zebra','Zebra','Zebra','Horse','Horse','Horse','Horse','Horse','Horse','Horse','Horse','Horse','Horse','Donkey','Donkey','Donkey','Donkey','Unicorn']
 
@@ -35,7 +35,9 @@ while Dollars != 0 and Keep_Going == True:
         won += 5.0
     Dollars -= 1
     print(f"You have ${Dollars}")
-    keep_goind = input("do you wish to continue playing ? if so press y")
-    if keep_going != "y" or keep_going != "Y":
+    keep_going = input("do you wish to continue playing ? if so press y")
+    if keep_going == "y" or keep_going == "Y":
+        Keep_Going = True
+    else:
         Keep_Going = False
-print("**********thankyou for playing**********")
+print("********** thankyou for playing **********")

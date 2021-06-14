@@ -18,17 +18,18 @@ while play == True:
             guess = int(input(f"please guess a number between 1 and {maximum} you have {guess_num} attempts left\n"))
             if 0 < guess <= maximum:
                 valid = True
+            elif guess in guesses:
+                print("YOU HAVE ALREADY GUESSED THIS NUMBER PLEASE GUESS A DIFFERENT NUMBER")
             else:
                 print ("PLEASE ENTER A WHOLE NUMBER BETWEEN 1 AND 10")
         except ValueError:
             print ("PLEASE ENTER A WHOLE NUMBER BETWEEN 1 AND 10")
-    if guess in guesses:
-        print("You have already guessed this number please guess again")
+
     else:
         guesses.append(guess)
         attempts += 1
         guess_num -= 1
-        if guess in nember:
+        if guess in numbers:
             numbers.pop(guess)
     
         if guess < goal :
