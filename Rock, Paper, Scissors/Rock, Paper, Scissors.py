@@ -35,30 +35,30 @@ while games > 0 and play == True:
 
   if user_choice.upper() == options[0]:
     if bot_option == options[1]:
-      print("you won")
-      user_score += 1
-    elif bot_option == options[2]:
-      print("you lost")
+      print(f"the bot chose {bot_option.title()} you did {user_choice.title()} you lost!!")
       bot_score += 1
+    elif bot_option == options[2]:
+      print(f"the bot chose {bot_option.title()} you did {user_choice.title()} you won!!")
+      user_score += 1
     else:
-      print("its a draw")
+      print(f"the bot chose {bot_option.title()} you did {user_choice.title()} its a draw")
   elif user_choice.upper() == options[1]:
     if bot_option == options[2]:
-      print("you won")
-      user_score += 1
-    elif bot_option == options[0]:
-      print("you lost")
+      print(f"the bot chose {bot_option.title()} you did {user_choice.title()} you lost")
       bot_score += 1
+    elif bot_option == options[0]:
+      print(f"the bot chose {bot_option.title()} you did {user_choice.title()} you won!!")
+      user_score += 1
     else:
-      print("its a draw")
+      print(f"the bot chose {bot_option.title()} you did {user_choice.title()} its a draw")
   else:
     if bot_option == options[0]:
-      print("you won")
-      user_score += 1
-    elif bot_option == options[1]:
-      print("you lost")
+      print(f"the bot chose {bot_option.title()} you did {user_choice.title()} you lost")
       bot_score += 1
+    elif bot_option == options[1]:
+      print(f"the bot chose {bot_option.title()} you did {user_choice.title()} you won!!")
+      user_score += 1
     else:
-      print("its a draw")
+      print(f"the bot chose {bot_option.title()} you did {user_choice.title()} its a draw")
   print(f"your score is {user_score}\nthe computers score is {bot_score}")
 print("****** Thankyou for playing ******")
